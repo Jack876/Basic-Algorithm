@@ -1,0 +1,43 @@
+function findLongestWord(str) {
+    var myArray = [];
+    var index = [];
+    myArray = str.split(' ');
+    
+    for (i = 0; i < myArray.length; i++){
+      index[i] = myArray[i].length;      
+    }
+  
+    var longest = 1;
+    for (j = 0; j < index.length; j ++){      
+      if (index[j] > longest) {
+         longest = index[j]; 
+        }
+    }
+  return longest;
+  //str.length;
+}
+
+findLongestWord("The quick brown fox jumped over the lazy dog");
+
+
+Find the Longest Word in a String
+Return the length of the longest word in the provided sentence.
+
+Your response should be a number.
+
+Remember to use Read-Search-Ask if you get stuck. Write your own code.
+
+Here are some helpful links:
+
+String.prototype.split()
+String.length
+//大牛的代码，没有用循环，用的是sort（）,如果a-b, 升序。反之降序
+function findLongestWord(str) {
+	var findArray = str.split(' ');
+	findArray.sort(function (a, b) {
+		return b.length - a.length;
+	});
+	return findArray[0].length;
+}
+
+findLongestWord('The quick brown fox jumped over the lazy dog');
