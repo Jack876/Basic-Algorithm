@@ -19,6 +19,14 @@ function titleCase(str) {
 titleCase("I'm a little tea pot");
 
 
+
+// another way to substitute the foreach loop:
+for(i = 0; i < arr.length; i ++) {
+    var capWord = arr[i].charAt(0).toUpperCase() + arr[i].substring(1);
+    newArr.push(capWord);
+
+
+
 //another way to do it:
 
 String.prototype.replaceAt = function(index, character) {
